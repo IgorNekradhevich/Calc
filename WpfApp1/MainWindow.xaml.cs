@@ -68,7 +68,6 @@ namespace WpfApp1
                     }
                 }
             }
-
             if (button.Content.ToString() == "BSP")
             {
                 if (textBox.Text.Length>0)
@@ -76,12 +75,26 @@ namespace WpfApp1
                 if (textBox.Text == "-")
                     textBox.Text = "";
             }
-
             if (button.Content.ToString() == "C")
             {
                 label.Content = "";
                 textBox.Text = "";
             }
+            if (button.Content.ToString() == "=")
+            {
+                if (label.Content!="")
+                {
+                    string question = label.Content.ToString();
+                    if (textBox.Text == "")
+                        question = question.Remove(question.Length - 1);
+                    else
+                        question += textBox.Text;
+                    Calculator test = new Calculator(question);
+                    textBox.Text = test.Result().ToString();
+                }
+
+            }
+
         }
     }
 }

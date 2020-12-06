@@ -23,7 +23,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.ColumnSpan ="5" >
-            <Label x:Name="label" FontSize="13" HorizontalContentAlignment="Right" Height="28" ></Label>
+            <Label Content="" x:Name="label" FontSize="13" HorizontalContentAlignment="Right" Height="28" ></Label>
             <TextBox  x:Name="textBox"  FontSize="40" HorizontalContentAlignment="Right" ></TextBox>
         </StackPanel>
 
